@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-container1{
+    display: grid;
+    grid-template-columns: 58fr 42fr;
+    min-height: 450px;
+}
+@media (max-width: 768px) {
+    .grid-container1{
+        grid-template-columns: repeat(1, 1fr);
+        min-height: 0;
+    }    
+}
+
+.nav-links li {
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+.nav-links li a {
+    color: white;
+    position: relative;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+
+.nav-links li a::after {
+    position: absolute;
+    content: "";
+    margin-top: 5px;
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: white;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 35fr 40fr 35fr;
+    min-height: 270px;
+}
+
+.left {
+    background-image: url("/images/image-about-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 270px;
+}
+
+.right {
+    background-image: url(/images/image-about-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 270px;
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media screen and (max-width: 768px) {
+
+    .grid-container2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .navbar {
+      display: flex;
+      padding:  0rem;
+      background: white;
+      display: none;
+     }
+    
+    .navbar.toggleCls {
+      display: flex;
+    }
+    .nav-links {
+      margin-left: 25%;
+    }
+    .nav-links li {
+      margin: .5rem .5rem;
+    }
+    .nav-links li a {
+      color: black;
+      font-size: .9rem;
+    }
+  
+    .nav-links li a:after{
+      background: black;
+    }
+    .logo {
+      left: 40%;
+    }
+    .burger-icon {
+      display: block;
+      color: black;
+    }
+    .close-icon {
+      display: none;
+    }
+    .close-icon.toggleCls {
+      display: block;
+    }
+    .burger-icon.toggleCls {
+      display: none;
+    }
+    .logo.toggleCls {
+      display: none;
+    }
+}

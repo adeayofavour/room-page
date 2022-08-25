@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="index.js" defer></script>
+  <title>Frontend Mentor Room homepage</title>
+</head>
+<body>
+
+  <div class="grid-container1 grid md:grid-cols-2">
+    <div class="main-photo relative min-h-[450px] max-w-full">
+        <img src="/images/icon-hamburger.svg" class="burger-icon scale-150 absolute top-[50px] left-[50px] cursor-pointer md:hidden" onclick="toggle()" alt="">
+        <img src="/images/icon-close.svg" class="close-icon absolute scale-150 top-[50px] left-[50px] cursor-pointer md:hidden" onclick="toggle()" alt="">                
+          <nav class="navbar flex flex-row py-2 md:block md:px-40">
+            <ul class="nav-links flex flex-row justify-between md:justify-start bg-white ml-8 py-9 md:bg-transparent">
+              <li><a href="#">home</a></li>
+              <li><a href="#">shop</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </nav>
+          <img src="/images/logo.svg" class="logo absolute block scale-[1.3] top-[50px] left-[70px]" alt="">
+        <div class="sliders-mobile flex absolute bottom-0 right-0 md:hidden">
+          <img src="/images/icon-angle-left.svg" onclick="slidePrevImg()" class="slider left-slider bg-black p-[20px] cursor-pointer transition hover:transition hover:delay-1000 hover:ease-in hover:bg-gray-500" alt="">
+          <img src="/images/icon-angle-right.svg" onclick="slideNextImg()" class="slider right-slider bg-black p-[20px] cursor-pointer transition hover:transition hover:delay-1000 hover:ease-in hover:bg-gray-500" alt="">
+        </div>
+    </div>
+  
+    <div class="main-text flex flex-col justify-center relative p-5 md:pt-8 md:pr-16 md:pb-20 md:pl-16">
+        <h1 class="heading text-[1.8rem] md:text-4xl text-black font-[600] mb-8">Discover innovative ways to decorate</h1>
+        <p class="paragraph leading-[1.4rem] text-[1rem] mb-8"> We provide unmatched quality, comfort, and style for property owners across the country. 
+          Our experts combine form and function in bringing your vision to life. Create a room in your 
+          own style with our collection and make your property a reflection of you and what you love.</p>
+          <a href="#" class="shop-link uppercase flex items-center text-left tracking-widest transition ease-in delay-500 font-semibold text-base hover:text-gray-500">Shop now<svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg></a>
+            <div class="sliders absolute hidden bottom-0 left-0 md:flex flex-row">
+              <img src="/images/icon-angle-left.svg" onclick="slidePrevImg()" class="slider left-slider bg-black p-[25px] cursor-pointer transition hover:transition hover:delay-1000 hover:ease-in hover:bg-gray-500 mr-[1px]" alt="">
+              <img src="/images/icon-angle-right.svg" onclick="slideNextImg()" class="slider right-slider bg-black p-[25px] cursor-pointer transition hover:transition hover:delay-1000 hover:ease-in hover:bg-gray-500" alt="">
+            </div>
+    </div>
+  </div>
+
+  <div class="grid-container2 grid-cols-1 md:grid-cols-3 min-h-0">
+    <div class="left"></div>
+    <div class="middle flex flex-col justify-center">
+      <div class="middle-text py-12 px-8 leading-5">
+        <h3 class="text-[1.8rem] md:text-4xl text-black font-[600] mb-8">About our furniture</h3>
+      <p class="text-gray-500">
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>
